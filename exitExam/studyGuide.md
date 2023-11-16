@@ -1,6 +1,9 @@
 # BA Exit Exam Study Guide
 
 ## Procedural Programming
+- Static Casting
+	- To have one data type changed to another data type
+	- You can change int to double, double to int, int to char, char to int. ex(static_cast<int>('A') is 65 and static_cast<char>(65) is 'A')
 - [Arrays](https://www.geeksforgeeks.org/cpp-arrays/)
    - an array is a data structure that is used to store multiple values of similar data types in a contiguous memory location
 - [Structs](https://www.geeksforgeeks.org/structures-in-cpp/)
@@ -9,7 +12,43 @@
 	  - **Member Functions**: These members are normal C++ functions. Along with variables, we can also include functions inside a structure declaration.
 - [Modulus operator](https://www.geeksforgeeks.org/modulo-operator-in-c-cpp-with-examples/)
    - denoted by %, is an arithmetic operator. The modulo division operator produces the remainder of an integer division which is also called the modulus of the operation.
+- Enums
+	- is defined as a list of things.
 
+	Correct
+	```cpp
+	enum Colors { BROWN, BLUE, RED, GREEN, YELLOW };
+	```
+
+	Incorrect
+	```cpp
+	enum Grade { 'A', 'B', 'C', 'D', 'F' }; // illegal enumeration type
+	enum Place { 1ST, 2ND, 3RD, 4TH}; // illegal enumeration type
+
+	// cannot define value, APPLE in multiple types (as shown below)
+	enum Fruit { APPLE, ORANGE, PEACH };
+	enum Food { MILKSHAKE, BURGER, EGGS, APPLE };
+	```
+	- Enumeration types are stored internally as integers, which means they can be compared with each other. You have to explicitly cast the integer back to the enm type after the operator.
+	```cpp
+	fav = static_cast<Sport>(mySport + 1);
+	```
+	- Relational Operators
+	```cpp
+	FOOTBALL <= SOCCER;  // true
+	HOCKEY > BASKETBALL; // true
+	FOOTBALL == SOCCER;  // false
+	```
+	- Counter in a Counter-Controlled Loop
+	```cpp
+	for (Sport mySport = BASKETBALL; mySport <= SOCCER;
+		mySport = static_cast<Sport>(mySport + 1))
+	{
+		// Do stuff with mySport. Each iteration it is a different sport.
+	}
+	```
+	- Enumeration types are stored internally as integers and therefore, will output numbers (not words) when displayed. However, we can write a function to convert the enumerated value into a string.
+	
 ## Object-Oriented Programming
 [Object-Oriented Programming](https://www.geeksforgeeks.org/object-oriented-programming-oops-concept-in-java/?ref=shm)
 - [Abstract Classes:](https://www.geeksforgeeks.org/abstract-classes-in-java/)
