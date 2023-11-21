@@ -12,6 +12,7 @@
 	  - **Member Functions**: These members are normal C++ functions. Along with variables, we can also include functions inside a structure declaration.
 - [Modulus operator](https://www.geeksforgeeks.org/modulo-operator-in-c-cpp-with-examples/)
    - denoted by %, is an arithmetic operator. The modulo division operator produces the remainder of an integer division which is also called the modulus of the operation.
+   - ex: num % 6 + 5
 - Enums
 	- is defined as a list of things.
 
@@ -52,7 +53,7 @@
 ## Object-Oriented Programming
 [Object-Oriented Programming](https://www.geeksforgeeks.org/object-oriented-programming-oops-concept-in-java/?ref=shm)
 - [Abstract Classes:](https://www.geeksforgeeks.org/abstract-classes-in-java/)
-   - An abstract class is a class that can not be initiated by itself, it needs to be subclassed by another class to use its properties.
+   - An abstract class is a class that can not be instantiated by itself, it needs to be subclassed by another class to use its properties.
    - An abstract class can be created using “abstract” keywords.
    - We can have an abstract class without any abstract method.
 - [Generic classes](https://www.geeksforgeeks.org/generic-class-in-java/)
@@ -61,13 +62,31 @@
    - Generic means parameterized types. Using generics, the idea is to allow any data type to be it Integer, String, or any user-defined Datatype and it is possible to create classes that work with different data types.
    - the items or functions in that class can be generalized with the parameter(example `<T>`) to specify that we can add any type as a parameter in place of T like Integer, Character, String, Double or any other user-defined type.
 - [Template arguments](https://www.geeksforgeeks.org/templates-cpp/)
-   - to pass the data type as a parameter so that we don’t need to write the same code for different data types
+   - to pass the data type as a parameter so that we don’t need to write the same code for different data types.
 - [Interfaces in Java](https://www.geeksforgeeks.org/interfaces-in-java/)
    - Is 100% abstract class and has only abstract methods.
-   - Can NOT have instances
-   - All variables are final (constants), public, and static
+   - Can NOT have instances.
+   - All variables are final (constants), public, and static.
 
 ## Data Structures
+- **Linked Lists** - store data in nodes, where each node contains the data and pointer to the next node. Best for linear data structure.
+	- Uses: stack, queue, or where elements need to be efficiently added or removed from middle of the structure.
+	- Advantages
+		- Efficient insertion and deletion of elements, dynamic size, easy to implement
+		- A variable size; memory is allocated and released as needed.
+		- Some algorithms are faster with linked lists compared to arrays.
+		- Expandable to nonlinear data structures (nodes with multiple pointers) ex: trees and graphs.
+
+- **Binary Tree** - is either empty or has these properties: root node and two sets of nodes( left subtree and right subtree). Best for hierarchical data.
+	- Uses: file systems, organizational charts, or searching and sorting algorithms like binary search tree
+	- Advantages
+		- Efficient searching, insertion, and deletion (especially when balanced)
+
+- **HashTable** - map keys to values. Best for fast access to data using keys and avoid collisions efficiently.
+	- Uses: dictionary, symbol table, or when to retrieve values based on a key quickly.
+	- Advantages
+		- Fast lookup, efficient for associative arrays, maps and caches.
+
 - [Big-O](https://flexiple.com/algorithms/big-o-notation-cheat-sheet) notation for various data structures
    - Constant: O(1)
    - Linear time: O(n)
@@ -136,15 +155,15 @@
       - Deals with the electrical signal
 
 - [5-Layer Internet Protocol Stack](https://www.educative.io/answers/what-is-the-five-layer-internet-protocol-stack)
-   - Application
+   - **Application**
       - responsible for communication between applications running on two different end systems.
-   - Transport
+   - **Transport**
       -  responsible for collecting the application layer message from the relevant end-point and transferring it to the network layer to be communicated over the network.
-   - Network
+   - **Network**
       - responsible for transferring data from one system to another on the network. The transport layer passes a segment and the destination address to the network layer. Main use is for Internet Protocol (IP).
-   - Link
+   - **Link**
       - responsible for communication between one device and its immediate neighbor.
-   - Physical
+   - **Physical**
       -responsible for breaking the data frame into bits, converting it into a form that can be transmitted over the physical communication line, and transferring it.
 
 ## System Analysis
